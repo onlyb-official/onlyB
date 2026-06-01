@@ -10,6 +10,8 @@
 
 <title>ONLY B | Hand Drawn Art Brand</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
 
 
@@ -36,11 +38,11 @@ scroll-behavior:smooth;
 
 body{
 
-font-family:Arial,sans-serif;
+font-family:'Inter',sans-serif;
 
 background:#fff;
 
-color:#000;
+color:#111;
 
 overflow-x:hidden;
 
@@ -48,261 +50,89 @@ overflow-x:hidden;
 
 
 
+::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+background:#111;
+
+}
+
+
+
 header{
+
+
 
 position:fixed;
 
+
+
 top:0;
+
+
 
 left:0;
 
+
+
 width:100%;
 
-background:white;
+
+
+padding:25px 8%;
+
+
 
 display:flex;
+
+
 
 justify-content:space-between;
 
-align-items:center;
 
-padding:20px 8%;
-
-z-index:1000;
-
-border-bottom:1px solid #eee;
-
-}
-
-
-
-header h3{
-
-letter-spacing:4px;
-
-}
-
-
-
-nav a{
-
-text-decoration:none;
-
-color:black;
-
-margin-left:25px;
-
-font-size:14px;
-
-}
-
-
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
 
 align-items:center;
 
-flex-direction:column;
 
-text-align:center;
 
-padding:20px;
+background:rgba(255,255,255,.9);
+
+
+
+backdrop-filter:blur(10px);
+
+
+
+z-index:9999;
+
+
 
 }
 
 
 
-.hero img{
+.logo{
 
-width:250px;
 
-max-width:80%;
 
-margin-bottom:30px;
+font-size:20px;
 
-}
 
 
+letter-spacing:8px;
 
-.hero h1{
 
-font-size:4rem;
 
-letter-spacing:10px;
+font-weight:700;
 
-}
 
-
-
-.hero p{
-
-margin-top:15px;
-
-letter-spacing:3px;
-
-}
-
-
-
-.image-section img{
-
-width:100%;
-
-display:block;
-
-}
-
-
-
-.text{
-
-padding:100px 10%;
-
-text-align:center;
-
-line-height:2;
-
-max-width:1000px;
-
-margin:auto;
-
-}
-
-
-
-.process{
-
-padding:100px 10%;
-
-text-align:center;
-
-}
-
-
-
-.steps{
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-flex-wrap:wrap;
-
-margin-top:50px;
-
-}
-
-
-
-.step{
-
-max-width:200px;
-
-}
-
-
-
-.step h3{
-
-font-size:2rem;
-
-margin-bottom:10px;
-
-}
-
-
-
-.order{
-
-padding:120px 10%;
-
-text-align:center;
-
-}
-
-
-
-.button{
-
-display:inline-block;
-
-padding:15px 40px;
-
-border:2px solid black;
-
-text-decoration:none;
-
-color:black;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-
-
-.button:hover{
-
-background:black;
-
-color:white;
-
-}
-
-
-
-.fade{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:1s;
-
-}
-
-
-
-.fade.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-
-footer{
-
-padding:40px;
-
-text-align:center;
-
-font-size:12px;
-
-color:#777;
-
-}
-
-
-
-@media(max-width:768px){
-
-
-
-.hero h1{
-
-font-size:2.5rem;
 
 }
 
@@ -310,7 +140,539 @@ font-size:2.5rem;
 
 nav{
 
+
+
+display:flex;
+
+
+
+gap:30px;
+
+
+
+}
+
+
+
+nav a{
+
+
+
+text-decoration:none;
+
+
+
+color:black;
+
+
+
+font-size:13px;
+
+
+
+letter-spacing:2px;
+
+
+
+transition:.3s;
+
+
+
+}
+
+
+
+nav a:hover{
+
+
+
+opacity:.5;
+
+
+
+}
+
+
+
+.hero{
+
+
+
+height:100vh;
+
+
+
+display:flex;
+
+
+
+flex-direction:column;
+
+
+
+justify-content:center;
+
+
+
+align-items:center;
+
+
+
+text-align:center;
+
+
+
+padding:20px;
+
+
+
+}
+
+
+
+.hero img{
+
+
+
+width:260px;
+
+
+
+max-width:80%;
+
+
+
+margin-bottom:40px;
+
+
+
+animation:fadeUp 1.5s ease;
+
+
+
+}
+
+
+
+.hero h1{
+
+
+
+font-size:clamp(60px,10vw,140px);
+
+
+
+letter-spacing:15px;
+
+
+
+font-weight:700;
+
+
+
+animation:fadeUp 1.5s ease;
+
+
+
+}
+
+
+
+.hero p{
+
+
+
+margin-top:20px;
+
+
+
+letter-spacing:4px;
+
+
+
+font-size:14px;
+
+
+
+animation:fadeUp 1.8s ease;
+
+
+
+}
+
+
+
+.scroll{
+
+
+
+position:absolute;
+
+
+
+bottom:40px;
+
+
+
+font-size:12px;
+
+
+
+letter-spacing:3px;
+
+
+
+animation:float 2s infinite;
+
+
+
+}
+
+
+
+@keyframes float{
+
+
+
+0%{transform:translateY(0);}
+
+
+
+50%{transform:translateY(-8px);}
+
+
+
+100%{transform:translateY(0);}
+
+
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+
+from{
+
+
+
+opacity:0;
+
+
+
+transform:translateY(40px);
+
+
+
+}
+
+
+
+to{
+
+
+
+opacity:1;
+
+
+
+transform:translateY(0);
+
+
+
+}
+
+
+
+}
+
+
+
+.section{
+
+
+
+padding:140px 10%;
+
+
+
+}
+
+
+
+.section-title{
+
+
+
+font-size:14px;
+
+
+
+letter-spacing:5px;
+
+
+
+margin-bottom:60px;
+
+
+
+text-align:center;
+
+
+
+}
+
+
+
+.concept{
+
+
+
+max-width:900px;
+
+
+
+margin:auto;
+
+
+
+text-align:center;
+
+
+
+font-size:18px;
+
+
+
+line-height:2.2;
+
+
+
+}
+
+
+
+.featured{
+
+
+
+width:100%;
+
+
+
+overflow:hidden;
+
+
+
+}
+
+
+
+.featured img{
+
+
+
+width:100%;
+
+
+
+display:block;
+
+
+
+transition:1s;
+
+
+
+}
+
+
+
+.featured:hover img{
+
+
+
+transform:scale(1.05);
+
+
+
+}
+
+
+
+.gallery{
+
+
+
+display:grid;
+
+
+
+grid-template-columns:repeat(3,1fr);
+
+
+
+gap:25px;
+
+
+
+}
+
+
+
+.gallery img{
+
+
+
+width:100%;
+
+
+
+display:block;
+
+
+
+aspect-ratio:1/1;
+
+
+
+object-fit:cover;
+
+
+
+transition:.5s;
+
+
+
+}
+
+
+
+.gallery img:hover{
+
+
+
+transform:scale(1.03);
+
+
+
+}
+
+
+
+.placeholder{
+
+
+
+aspect-ratio:1/1;
+
+
+
+border:1px solid #ddd;
+
+
+
+display:flex;
+
+
+
+justify-content:center;
+
+
+
+align-items:center;
+
+
+
+letter-spacing:5px;
+
+
+
+font-size:12px;
+
+
+
+color:#999;
+
+
+
+}
+
+
+
+.fade{
+
+
+
+opacity:0;
+
+
+
+transform:translateY(50px);
+
+
+
+transition:1.2s;
+
+
+
+}
+
+
+
+.fade.show{
+
+
+
+opacity:1;
+
+
+
+transform:translateY(0);
+
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+
+.gallery{
+
+
+
+grid-template-columns:1fr;
+
+
+
+}
+
+
+
+nav{
+
+
+
 display:none;
+
+
+
+}
+
+
+
+.hero h1{
+
+
+
+letter-spacing:8px;
+
+
 
 }
 
@@ -328,17 +690,17 @@ display:none;
 
 <header>
 
-<h3>ONLY B</h3>
+<div class="logo">ONLY B</div>
 
 <nav>
 
-Gallery
+CONCEPT
 
-About
+GALLERY
 
-Process
+PRICE
 
-Order
+ORDER
 
 </nav>
 
@@ -352,99 +714,368 @@ Order
 
 <p>WE DON'T PRINT. WE DRAW.</p>
 
+<div class="scroll">
+
+SCROLL
+
+</div>
+
 </section>
 
-<section class="image-section fade" id="gallery">
+<section class="section fade" id="concept">
+
+<div class="section-title">
+
+CONCEPT
+
+</div>
+
+<div class="concept">
+
+ONLY Bは大学生デザイナーによる
+
+完全手描きアートブランドです。
+
+量産では表現できない
+
+唯一無二の作品を制作しています。
+
+常に変化し続ける世界。
+
+その変化を生み出すのは、
+
+他でもないあなた自身です。
+
+</div>
+
+</section>
+
+<section class="featured fade">
 
 <img src="shoes1.image.jpg">
 
 </section>
 
-<section class="text fade" id="about">
+<section class="section fade" id="gallery">
 
-<h2>ABOUT</h2>
+<div class="section-title">
 
-<p>
-
-ONLY B is a hand-drawn art brand created by university students.
-
-Every line is drawn directly by hand.
-
-The design represents a constantly changing world and the power of individuals to influence that change.
-
-No copies.
-
-No templates.
-
-Only originals.
-
-</p>
-
-</section>
-
-<section class="process fade" id="process">
-
-<h2>PROCESS</h2>
-
-<div class="steps">
-
-<div class="step">
-
-<h3>01</h3>
-
-<p>Send your item</p>
+GALLERY
 
 </div>
 
-<div class="step">
-
-<h3>02</h3>
-
-<p>Discuss design</p>
-
-</div>
-
-<div class="step">
-
-<h3>03</h3>
-
-<p>Hand Drawing</p>
-
-</div>
-
-<div class="step">
-
-<h3>04</h3>
-
-<p>Return to You</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="image-section fade">
+<div class="gallery">
 
 <img src="design1.jpg">
 
+<div class="placeholder">
+
+COMING SOON
+
+</div>
+
+<div class="placeholder">
+
+COMING SOON
+
+</div>
+
+<div class="placeholder">
+
+COMING SOON
+
+</div>
+
+<div class="placeholder">
+
+COMING SOON
+
+</div>
+
+<div class="placeholder">
+
+COMING SOON
+
+</div>
+
+</div>
+
+</section>
+<section class="section fade" id="price">
+
+<div class="section-title">
+
+PRICE
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+<div style="border:1px solid #ddd;padding:40px;text-align:center;">
+
+<h3>10cm × 10cm 以下</h3>
+
+<br>
+
+<p style="font-size:30px;font-weight:bold;">¥3,000</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:40px;text-align:center;">
+
+<h3>20cm × 20cm 以下</h3>
+
+<br>
+
+<p style="font-size:30px;font-weight:bold;">¥8,000</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:40px;text-align:center;">
+
+<h3>30cm × 30cm 以下</h3>
+
+<br>
+
+<p style="font-size:30px;font-weight:bold;">¥13,000</p>
+
+</div>
+
+<div style="border:2px solid #111;padding:40px;text-align:center;">
+
+<h3>ONLY B AIR FORCE 1</h3>
+
+<br>
+
+<p style="font-size:30px;font-weight:bold;">¥40,000</p>
+
+<br>
+
+<p>新品白エアフォースワン</p>
+
+<p>手描きカスタム仕様</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="order fade" id="order">
+<section class="section fade">
 
-<h2>ORDER</h2>
+<div class="section-title">
 
-<a href="https://www.instagram.com/onlyb.official/" class="button">
+CUSTOM ORDER
+
+</div>
+
+<div class="concept">
+
+お客様の私物に直接デザインを施します。
+
+スニーカー、ヘッドホン、小物、ケースなど
+
+様々なアイテムに対応可能です。
+
+素材によっては制作できない場合があります。
+
+</div>
+
+</section>
+
+<section class="section fade">
+
+<div class="section-title">
+
+対応素材
+
+</div>
+
+<div class="concept">
+
+〇 対応可能
+
+革
+
+プラスチック
+
+金属
+
+木材
+
+キャンバス生地
+
+△ 要相談
+
+布製品
+
+特殊塗装面
+
+✕ 対応不可
+
+ゴム
+
+シリコン
+
+大きく伸縮する素材
+
+</div>
+
+</section>
+
+<section class="section fade">
+
+<div class="section-title">
+
+PROCESS
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px;">
+
+<div style="border:1px solid #ddd;padding:30px;text-align:center;">
+
+<h2>01</h2>
+
+<br>
+
+<p>Instagram DM</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:30px;text-align:center;">
+
+<h2>02</h2>
+
+<br>
+
+<p>デザイン相談</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:30px;text-align:center;">
+
+<h2>03</h2>
+
+<br>
+
+<p>前払い</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:30px;text-align:center;">
+
+<h2>04</h2>
+
+<br>
+
+<p>制作開始</p>
+
+</div>
+
+<div style="border:1px solid #ddd;padding:30px;text-align:center;">
+
+<h2>05</h2>
+
+<br>
+
+<p>発送</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section fade">
+
+<div class="section-title">
+
+IMPORTANT
+
+</div>
+
+<div class="concept">
+
+完全受注制作です。
+
+制作開始後のキャンセルはできません。
+
+お支払いは前払い制となります。
+
+振込方法やその他詳細は
+
+Instagram DMにてご案内いたします。
+
+</div>
+
+</section>
+
+<section class="section fade" id="order">
+
+<div class="section-title">
+
+ORDER
+
+</div>
+
+<div style="text-align:center;">
+
+<h2 style="font-size:40px;margin-bottom:30px;">
+
+あなただけの作品を。
+
+</h2>
+
+<p style="margin-bottom:50px;">
+
+ご相談・ご注文はInstagram DMより
+
+お気軽にお問い合わせください。
+
+</p>
+
+<a href=“https://www.instagram.com/onlyb.official/”
+
+style=“display:inline-block;
+padding:18px 50px;
+background:#111;
+color:white;
+text-decoration:none;
+letter-spacing:3px;
+transition:.4s;”>
 
 ORDER NOW
 
 </a>
 
+</div>
+
 </section>
 
-<footer>
+<footer style="padding:100px 10%;text-align:center;">
+
+<h2 style="letter-spacing:8px;margin-bottom:20px;">
+
+ONLY B
+
+</h2>
+
+<p>
+
+WE DON’T PRINT.
+
+WE DRAW.
+
+</p>
+
+<br>
+
+<p style="color:#999;font-size:12px;">
 
 © ONLY B
+
+</p>
 
 </footer>
 
@@ -460,11 +1091,11 @@ function reveal(){
 
 
 
-fades.forEach(item=>{
+fades.forEach(el=>{
 
 
 
-const top=item.getBoundingClientRect().top;
+const top=el.getBoundingClientRect().top;
 
 
 
@@ -472,7 +1103,7 @@ if(top<window.innerHeight-100){
 
 
 
-item.classList.add('show');
+el.classList.add('show');
 
 
 
