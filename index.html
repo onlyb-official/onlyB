@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
@@ -8,679 +7,366 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ONLY B | Hand Drawn Art Brand</title>
+<title>ONLY B</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
 
-
-
 *{
-
 margin:0;
-
 padding:0;
-
 box-sizing:border-box;
-
 }
-
-
 
 html{
-
 scroll-behavior:smooth;
-
 }
-
-
 
 body{
-
 font-family:'Inter',sans-serif;
-
-background:#fff;
-
-color:#111;
-
+background:#050505;
+color:white;
 overflow-x:hidden;
-
 }
-
-
-
-::-webkit-scrollbar{
-
-width:6px;
-
-}
-
-
-
-::-webkit-scrollbar-thumb{
-
-background:#111;
-
-}
-
-
 
 header{
 
-
-
 position:fixed;
-
-
 
 top:0;
 
-
-
 left:0;
-
-
 
 width:100%;
 
-
-
-padding:25px 8%;
-
-
+padding:30px 8%;
 
 display:flex;
-
-
 
 justify-content:space-between;
 
-
-
 align-items:center;
 
+background:rgba(5,5,5,.75);
 
-
-background:rgba(255,255,255,.9);
-
-
-
-backdrop-filter:blur(10px);
-
-
+backdrop-filter:blur(20px);
 
 z-index:9999;
 
-
-
 }
-
-
 
 .logo{
 
+font-size:18px;
 
-
-font-size:20px;
-
-
-
-letter-spacing:8px;
-
-
+letter-spacing:10px;
 
 font-weight:700;
 
-
-
 }
-
-
 
 nav{
 
-
-
 display:flex;
 
-
-
-gap:30px;
-
-
+gap:35px;
 
 }
-
-
 
 nav a{
 
-
-
 text-decoration:none;
 
-
-
-color:black;
-
-
-
-font-size:13px;
-
-
-
-letter-spacing:2px;
-
-
-
-transition:.3s;
-
-
-
-}
-
-
-
-nav a:hover{
-
-
-
-opacity:.5;
-
-
-
-}
-
-
-
-.hero{
-
-
-
-height:100vh;
-
-
-
-display:flex;
-
-
-
-flex-direction:column;
-
-
-
-justify-content:center;
-
-
-
-align-items:center;
-
-
-
-text-align:center;
-
-
-
-padding:20px;
-
-
-
-}
-
-
-
-.hero img{
-
-
-
-width:260px;
-
-
-
-max-width:80%;
-
-
-
-margin-bottom:40px;
-
-
-
-animation:fadeUp 1.5s ease;
-
-
-
-}
-
-
-
-.hero h1{
-
-
-
-font-size:clamp(60px,10vw,140px);
-
-
-
-letter-spacing:15px;
-
-
-
-font-weight:700;
-
-
-
-animation:fadeUp 1.5s ease;
-
-
-
-}
-
-
-
-.hero p{
-
-
-
-margin-top:20px;
-
-
-
-letter-spacing:4px;
-
-
-
-font-size:14px;
-
-
-
-animation:fadeUp 1.8s ease;
-
-
-
-}
-
-
-
-.scroll{
-
-
-
-position:absolute;
-
-
-
-bottom:40px;
-
-
+color:white;
 
 font-size:12px;
-
-
 
 letter-spacing:3px;
 
-
-
-animation:float 2s infinite;
-
-
+transition:.4s;
 
 }
 
+nav a:hover{
 
-
-@keyframes float{
-
-
-
-0%{transform:translateY(0);}
-
-
-
-50%{transform:translateY(-8px);}
-
-
-
-100%{transform:translateY(0);}
-
-
+opacity:.5;
 
 }
 
+.hero{
 
-
-@keyframes fadeUp{
-
-
-
-from{
-
-
-
-opacity:0;
-
-
-
-transform:translateY(40px);
-
-
-
-}
-
-
-
-to{
-
-
-
-opacity:1;
-
-
-
-transform:translateY(0);
-
-
-
-}
-
-
-
-}
-
-
-
-.section{
-
-
-
-padding:140px 10%;
-
-
-
-}
-
-
-
-.section-title{
-
-
-
-font-size:14px;
-
-
-
-letter-spacing:5px;
-
-
-
-margin-bottom:60px;
-
-
-
-text-align:center;
-
-
-
-}
-
-
-
-.concept{
-
-
-
-max-width:900px;
-
-
-
-margin:auto;
-
-
-
-text-align:center;
-
-
-
-font-size:18px;
-
-
-
-line-height:2.2;
-
-
-
-}
-
-
-
-.featured{
-
-
-
-width:100%;
-
-
-
-overflow:hidden;
-
-
-
-}
-
-
-
-.featured img{
-
-
-
-width:100%;
-
-
-
-display:block;
-
-
-
-transition:1s;
-
-
-
-}
-
-
-
-.featured:hover img{
-
-
-
-transform:scale(1.05);
-
-
-
-}
-
-
-
-.gallery{
-
-
-
-display:grid;
-
-
-
-grid-template-columns:repeat(3,1fr);
-
-
-
-gap:25px;
-
-
-
-}
-
-
-
-.gallery img{
-
-
-
-width:100%;
-
-
-
-display:block;
-
-
-
-aspect-ratio:1/1;
-
-
-
-object-fit:cover;
-
-
-
-transition:.5s;
-
-
-
-}
-
-
-
-.gallery img:hover{
-
-
-
-transform:scale(1.03);
-
-
-
-}
-
-
-
-.placeholder{
-
-
-
-aspect-ratio:1/1;
-
-
-
-border:1px solid #ddd;
-
-
+height:100vh;
 
 display:flex;
 
-
+flex-direction:column;
 
 justify-content:center;
 
-
-
 align-items:center;
 
+text-align:center;
 
-
-letter-spacing:5px;
-
-
-
-font-size:12px;
-
-
-
-color:#999;
-
-
+padding:20px;
 
 }
 
+.hero img{
 
+width:260px;
 
-.fade{
+max-width:80%;
 
+margin-bottom:50px;
 
-
-opacity:0;
-
-
-
-transform:translateY(50px);
-
-
-
-transition:1.2s;
-
-
+animation:fadeUp 1.2s ease;
 
 }
-
-
-
-.fade.show{
-
-
-
-opacity:1;
-
-
-
-transform:translateY(0);
-
-
-
-}
-
-
-
-@media(max-width:900px){
-
-
-
-.gallery{
-
-
-
-grid-template-columns:1fr;
-
-
-
-}
-
-
-
-nav{
-
-
-
-display:none;
-
-
-
-}
-
-
 
 .hero h1{
 
+font-size:clamp(70px,12vw,180px);
 
+letter-spacing:18px;
+
+line-height:1;
+
+}
+
+.hero p{
+
+margin-top:25px;
+
+letter-spacing:5px;
+
+font-size:13px;
+
+color:#aaa;
+
+}
+
+.hero-text{
+
+margin-top:40px;
+
+max-width:700px;
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+.scroll{
+
+position:absolute;
+
+bottom:40px;
+
+letter-spacing:4px;
+
+font-size:12px;
+
+color:#777;
+
+animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.section{
+
+padding:180px 10%;
+
+}
+
+.title{
+
+font-size:14px;
 
 letter-spacing:8px;
 
+margin-bottom:70px;
 
+text-align:center;
+
+color:#888;
 
 }
 
+.concept{
 
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:24px;
+
+line-height:2.2;
 
 }
 
+.featured{
 
+overflow:hidden;
+
+}
+
+.featured img{
+
+width:100%;
+
+display:block;
+
+transition:1s;
+
+}
+
+.featured:hover img{
+
+transform:scale(1.03);
+
+}
+
+.oneofone{
+
+text-align:center;
+
+font-size:clamp(50px,8vw,120px);
+
+letter-spacing:10px;
+
+font-weight:700;
+
+line-height:1.2;
+
+}
+
+.sub{
+
+margin-top:30px;
+
+font-size:16px;
+
+color:#999;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+}
+
+.placeholder{
+
+aspect-ratio:1/1;
+
+border:1px solid #333;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
+
+.placeholder h3{
+
+letter-spacing:5px;
+
+margin-bottom:15px;
+
+}
+
+.placeholder p{
+
+font-size:12px;
+
+color:#666;
+
+}
+
+.fade{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1.2s;
+
+}
+
+.fade.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:900px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero-text{
+
+font-size:16px;
+
+}
+
+}
 
 </style>
 
@@ -690,17 +376,21 @@ letter-spacing:8px;
 
 <header>
 
-<div class="logo">ONLY B</div>
+<div class="logo">
+
+ONLY B
+
+</div>
 
 <nav>
 
-CONCEPT
+<a href="#concept">CONCEPT</a>
 
-GALLERY
+<a href="#gallery">GALLERY</a>
 
-PRICE
+<a href="#price">PRICE</a>
 
-ORDER
+<a href="#order">ORDER</a>
 
 </nav>
 
@@ -714,6 +404,12 @@ ORDER
 
 <p>WE DON'T PRINT. WE DRAW.</p>
 
+<div class="hero-text">
+
+日常に疑問を持つ者たちへ。
+
+</div>
+
 <div class="scroll">
 
 SCROLL
@@ -724,7 +420,7 @@ SCROLL
 
 <section class="section fade" id="concept">
 
-<div class="section-title">
+<div class="title">
 
 CONCEPT
 
@@ -732,19 +428,25 @@ CONCEPT
 
 <div class="concept">
 
-ONLY Bは大学生デザイナーによる
+ONLY B は完全手描きアートブランド。
 
-完全手描きアートブランドです。
+<br><br>
 
-量産では表現できない
+白と黒だけで構成された線は、
 
-唯一無二の作品を制作しています。
+合理性や常識の境界を曖昧にする。
 
-常に変化し続ける世界。
+<br><br>
 
-その変化を生み出すのは、
+見る人によって意味は変わる。
 
-他でもないあなた自身です。
+<br><br>
+
+私たちは印刷しない。
+
+<br>
+
+描く。
 
 </div>
 
@@ -756,9 +458,25 @@ ONLY Bは大学生デザイナーによる
 
 </section>
 
+<section class="section fade">
+
+<div class="oneofone">
+
+ONE OF ONE
+
+</div>
+
+<div class="sub">
+
+すべて手描き。同じ作品は二度と生まれない。
+
+</div>
+
+</section>
+
 <section class="section fade" id="gallery">
 
-<div class="section-title">
+<div class="title">
 
 GALLERY
 
@@ -770,31 +488,41 @@ GALLERY
 
 <div class="placeholder">
 
-COMING SOON
+<h3>NEXT WORK</h3>
+
+<p>NEW PIECES ARE IN PRODUCTION</p>
 
 </div>
 
 <div class="placeholder">
 
-COMING SOON
+<h3>NEXT WORK</h3>
+
+<p>NEW PIECES ARE IN PRODUCTION</p>
 
 </div>
 
 <div class="placeholder">
 
-COMING SOON
+<h3>NEXT WORK</h3>
+
+<p>NEW PIECES ARE IN PRODUCTION</p>
 
 </div>
 
 <div class="placeholder">
 
-COMING SOON
+<h3>NEXT WORK</h3>
+
+<p>NEW PIECES ARE IN PRODUCTION</p>
 
 </div>
 
 <div class="placeholder">
 
-COMING SOON
+<h3>NEXT WORK</h3>
+
+<p>NEW PIECES ARE IN PRODUCTION</p>
 
 </div>
 
@@ -803,57 +531,101 @@ COMING SOON
 </section>
 <section class="section fade" id="price">
 
-<div class="section-title">
+<div class="title">
 
 PRICE
 
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+">
 
-<div style="border:1px solid #ddd;padding:40px;text-align:center;">
+<div style="
+border:1px solid #333;
+padding:50px;
+text-align:center;
+">
 
-<h3>10cm × 10cm 以下</h3>
+<p style="color:#888;letter-spacing:4px;">
+CUSTOM
+</p>
 
-<br>
+<h3 style="margin:25px 0;font-size:24px;">
+10cm × 10cm 以下
+</h3>
 
-<p style="font-size:30px;font-weight:bold;">¥3,000</p>
-
-</div>
-
-<div style="border:1px solid #ddd;padding:40px;text-align:center;">
-
-<h3>20cm × 20cm 以下</h3>
-
-<br>
-
-<p style="font-size:30px;font-weight:bold;">¥8,000</p>
-
-</div>
-
-<div style="border:1px solid #ddd;padding:40px;text-align:center;">
-
-<h3>30cm × 30cm 以下</h3>
-
-<br>
-
-<p style="font-size:30px;font-weight:bold;">¥13,000</p>
+<p style="font-size:42px;font-weight:700;">
+¥3,000
+</p>
 
 </div>
 
-<div style="border:2px solid #111;padding:40px;text-align:center;">
+<div style="
+border:1px solid #333;
+padding:50px;
+text-align:center;
+">
 
-<h3>ONLY B AIR FORCE 1</h3>
+<p style="color:#888;letter-spacing:4px;">
+CUSTOM
+</p>
 
+<h3 style="margin:25px 0;font-size:24px;">
+20cm × 20cm 以下
+</h3>
+
+<p style="font-size:42px;font-weight:700;">
+¥8,000
+</p>
+
+</div>
+
+<div style="
+border:1px solid #333;
+padding:50px;
+text-align:center;
+">
+
+<p style="color:#888;letter-spacing:4px;">
+CUSTOM
+</p>
+
+<h3 style="margin:25px 0;font-size:24px;">
+30cm × 30cm 以下
+</h3>
+
+<p style="font-size:42px;font-weight:700;">
+¥13,000
+</p>
+
+</div>
+
+<div style="
+border:2px solid white;
+padding:50px;
+text-align:center;
+">
+
+<p style="color:#888;letter-spacing:4px;">
+SIGNATURE
+</p>
+
+<h3 style="margin:25px 0;font-size:24px;">
+ONLY B AIR FORCE 1
+</h3>
+
+<p style="font-size:42px;font-weight:700;">
+¥40,000
+</p>
+
+<p style="margin-top:20px;color:#999;">
+新品・白エアフォースワン
 <br>
-
-<p style="font-size:30px;font-weight:bold;">¥40,000</p>
-
-<br>
-
-<p>新品白エアフォースワン</p>
-
-<p>手描きカスタム仕様</p>
+手描きカスタム
+</p>
 
 </div>
 
@@ -863,7 +635,7 @@ PRICE
 
 <section class="section fade">
 
-<div class="section-title">
+<div class="title">
 
 CUSTOM ORDER
 
@@ -871,13 +643,23 @@ CUSTOM ORDER
 
 <div class="concept">
 
-お客様の私物に直接デザインを施します。
+あなたの私物に直接描く。
 
-スニーカー、ヘッドホン、小物、ケースなど
+<br><br>
 
-様々なアイテムに対応可能です。
+スニーカー。
 
-素材によっては制作できない場合があります。
+ヘッドホン。
+
+スマホケース。
+
+キャンバス。
+
+小物。
+
+<br><br>
+
+世界にひとつだけの作品へ。
 
 </div>
 
@@ -885,9 +667,9 @@ CUSTOM ORDER
 
 <section class="section fade">
 
-<div class="section-title">
+<div class="title">
 
-対応素材
+MATERIAL
 
 </div>
 
@@ -895,29 +677,39 @@ CUSTOM ORDER
 
 〇 対応可能
 
-革
+<br><br>
+
+レザー
 
 プラスチック
 
-金属
-
 木材
+
+金属
 
 キャンバス生地
 
+<br><br><br>
+
 △ 要相談
+
+<br><br>
 
 布製品
 
 特殊塗装面
 
-✕ 対応不可
+<br><br><br>
+
+✕ 非対応
+
+<br><br>
 
 ゴム
 
 シリコン
 
-大きく伸縮する素材
+伸縮性の高い素材
 
 </div>
 
@@ -925,62 +717,46 @@ CUSTOM ORDER
 
 <section class="section fade">
 
-<div class="section-title">
+<div class="title">
 
 PROCESS
 
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px;">
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+">
 
-<div style="border:1px solid #ddd;padding:30px;text-align:center;">
-
+<div style="border:1px solid #333;padding:40px;">
 <h2>01</h2>
-
 <br>
-
 <p>Instagram DM</p>
-
 </div>
 
-<div style="border:1px solid #ddd;padding:30px;text-align:center;">
-
+<div style="border:1px solid #333;padding:40px;">
 <h2>02</h2>
-
 <br>
-
 <p>デザイン相談</p>
-
 </div>
 
-<div style="border:1px solid #ddd;padding:30px;text-align:center;">
-
+<div style="border:1px solid #333;padding:40px;">
 <h2>03</h2>
-
 <br>
-
 <p>前払い</p>
-
 </div>
 
-<div style="border:1px solid #ddd;padding:30px;text-align:center;">
-
+<div style="border:1px solid #333;padding:40px;">
 <h2>04</h2>
-
 <br>
-
-<p>制作開始</p>
-
+<p>制作</p>
 </div>
 
-<div style="border:1px solid #ddd;padding:30px;text-align:center;">
-
+<div style="border:1px solid #333;padding:40px;">
 <h2>05</h2>
-
 <br>
-
 <p>発送</p>
-
 </div>
 
 </div>
@@ -989,7 +765,7 @@ PROCESS
 
 <section class="section fade">
 
-<div class="section-title">
+<div class="title">
 
 IMPORTANT
 
@@ -997,15 +773,23 @@ IMPORTANT
 
 <div class="concept">
 
-完全受注制作です。
+完全受注制作。
 
-制作開始後のキャンセルはできません。
+<br><br>
 
-お支払いは前払い制となります。
+すべて手描き。
 
-振込方法やその他詳細は
+<br><br>
 
-Instagram DMにてご案内いたします。
+制作開始後のキャンセル不可。
+
+<br><br>
+
+お支払いは前払い制。
+
+<br><br>
+
+振込方法・その他相談はDMにて。
 
 </div>
 
@@ -1013,37 +797,48 @@ Instagram DMにてご案内いたします。
 
 <section class="section fade" id="order">
 
-<div class="section-title">
+<div style="
+text-align:center;
+max-width:900px;
+margin:auto;
+">
+
+<h2 style="
+font-size:clamp(50px,8vw,120px);
+letter-spacing:8px;
+margin-bottom:40px;
+">
 
 ORDER
 
-</div>
-
-<div style="text-align:center;">
-
-<h2 style="font-size:40px;margin-bottom:30px;">
-
-あなただけの作品を。
-
 </h2>
 
-<p style="margin-bottom:50px;">
+<p style="
+font-size:20px;
+line-height:2;
+color:#aaa;
+margin-bottom:60px;
+">
 
-ご相談・ご注文はInstagram DMより
+革命は大きなものじゃない。
 
-お気軽にお問い合わせください。
+<br>
+
+一本の線から始まる。
 
 </p>
 
-<a href=“https://www.instagram.com/onlyb.official/”
-
-style=“display:inline-block;
-padding:18px 50px;
-background:#111;
+<a href="https://www.instagram.com/onlyb.official/"
+style="
+display:inline-block;
+padding:22px 70px;
+border:2px solid white;
 color:white;
 text-decoration:none;
-letter-spacing:3px;
-transition:.4s;”>
+letter-spacing:5px;
+font-weight:700;
+transition:.4s;
+">
 
 ORDER NOW
 
@@ -1053,25 +848,40 @@ ORDER NOW
 
 </section>
 
-<footer style="padding:100px 10%;text-align:center;">
+<footer style="
+padding:200px 10% 80px;
+text-align:center;
+">
 
-<h2 style="letter-spacing:8px;margin-bottom:20px;">
+<h2 style="
+font-size:clamp(50px,10vw,150px);
+letter-spacing:15px;
+margin-bottom:30px;
+">
 
 ONLY B
 
 </h2>
 
-<p>
+<p style="
+letter-spacing:6px;
+color:#888;
+">
 
-WE DON’T PRINT.
+WE DON'T PRINT.
+
+<br><br>
 
 WE DRAW.
 
 </p>
 
-<br>
+<br><br><br>
 
-<p style="color:#999;font-size:12px;">
+<p style="
+font-size:12px;
+color:#555;
+">
 
 © ONLY B
 
@@ -1081,51 +891,27 @@ WE DRAW.
 
 <script>
 
-
-
 const fades=document.querySelectorAll('.fade');
-
-
 
 function reveal(){
 
+fades.forEach(item=>{
 
+const top=item.getBoundingClientRect().top;
 
-fades.forEach(el=>{
+if(top < window.innerHeight - 100){
 
-
-
-const top=el.getBoundingClientRect().top;
-
-
-
-if(top<window.innerHeight-100){
-
-
-
-el.classList.add('show');
-
-
+item.classList.add('show');
 
 }
-
-
 
 });
 
-
-
 }
-
-
 
 window.addEventListener('scroll',reveal);
 
-
-
 reveal();
-
-
 
 </script>
 
