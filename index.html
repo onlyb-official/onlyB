@@ -1,83 +1,348 @@
 <!DOCTYPE html>
+
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ONLY B</title>
+
+<title>ONLY B | Hand Drawn Art Brand</title>
 
 <style>
 
+
+
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 }
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
 
 body{
-background:#fff;
-color:#000;
+
 font-family:Arial,sans-serif;
+
+background:#fff;
+
+color:#000;
+
+overflow-x:hidden;
+
 }
+
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+z-index:1000;
+
+border-bottom:1px solid #eee;
+
+}
+
+
+
+header h3{
+
+letter-spacing:4px;
+
+}
+
+
+
+nav a{
+
+text-decoration:none;
+
+color:black;
+
+margin-left:25px;
+
+font-size:14px;
+
+}
+
+
 
 .hero{
+
 height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 flex-direction:column;
+
+text-align:center;
+
 padding:20px;
+
 }
+
+
 
 .hero img{
+
 width:250px;
+
 max-width:80%;
+
 margin-bottom:30px;
+
 }
+
+
 
 .hero h1{
+
 font-size:4rem;
-letter-spacing:8px;
+
+letter-spacing:10px;
+
 }
+
+
 
 .hero p{
+
 margin-top:15px;
-letter-spacing:2px;
+
+letter-spacing:3px;
+
 }
+
+
 
 .image-section img{
+
 width:100%;
+
 display:block;
+
 }
+
+
 
 .text{
-padding:80px 10%;
+
+padding:100px 10%;
+
 text-align:center;
+
 line-height:2;
+
+max-width:1000px;
+
+margin:auto;
+
 }
+
+
+
+.process{
+
+padding:100px 10%;
+
+text-align:center;
+
+}
+
+
+
+.steps{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-top:50px;
+
+}
+
+
+
+.step{
+
+max-width:200px;
+
+}
+
+
+
+.step h3{
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+
 
 .order{
-padding:100px 0;
+
+padding:120px 10%;
+
 text-align:center;
+
 }
+
+
 
 .button{
+
 display:inline-block;
+
 padding:15px 40px;
+
 border:2px solid black;
+
 text-decoration:none;
+
 color:black;
+
 font-weight:bold;
+
+transition:.3s;
+
 }
+
+
 
 .button:hover{
+
 background:black;
+
 color:white;
+
 }
 
+
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+
+.fade.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#777;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+}
+
+
+
 </style>
+
 </head>
 
 <body>
+
+<header>
+
+<h3>ONLY B</h3>
+
+<nav>
+
+Gallery
+
+About
+
+Process
+
+Order
+
+</nav>
+
+</header>
 
 <section class="hero">
 
@@ -89,23 +354,23 @@ color:white;
 
 </section>
 
-<section class="image-section">
+<section class="image-section fade" id="gallery">
 
 <img src="shoes1.image.jpg">
 
 </section>
 
-<section class="text">
+<section class="text fade" id="about">
 
 <h2>ABOUT</h2>
 
-<br>
-
 <p>
 
-ONLY B is a hand-drawn art brand.
+ONLY B is a hand-drawn art brand created by university students.
 
-Every piece is directly drawn by the designer.
+Every line is drawn directly by hand.
+
+The design represents a constantly changing world and the power of individuals to influence that change.
 
 No copies.
 
@@ -117,17 +382,57 @@ Only originals.
 
 </section>
 
-<section class="image-section">
+<section class="process fade" id="process">
+
+<h2>PROCESS</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<h3>01</h3>
+
+<p>Send your item</p>
+
+</div>
+
+<div class="step">
+
+<h3>02</h3>
+
+<p>Discuss design</p>
+
+</div>
+
+<div class="step">
+
+<h3>03</h3>
+
+<p>Hand Drawing</p>
+
+</div>
+
+<div class="step">
+
+<h3>04</h3>
+
+<p>Return to You</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="image-section fade">
 
 <img src="design1.jpg">
 
 </section>
 
-<section class="order">
+<section class="order fade" id="order">
 
 <h2>ORDER</h2>
-
-<br><br>
 
 <a href="https://www.instagram.com/onlyb.official/" class="button">
 
@@ -137,5 +442,62 @@ ORDER NOW
 
 </section>
 
+<footer>
+
+© ONLY B
+
+</footer>
+
+<script>
+
+
+
+const fades=document.querySelectorAll('.fade');
+
+
+
+function reveal(){
+
+
+
+fades.forEach(item=>{
+
+
+
+const top=item.getBoundingClientRect().top;
+
+
+
+if(top<window.innerHeight-100){
+
+
+
+item.classList.add('show');
+
+
+
+}
+
+
+
+});
+
+
+
+}
+
+
+
+window.addEventListener('scroll',reveal);
+
+
+
+reveal();
+
+
+
+</script>
+
 </body>
+
 </html>
